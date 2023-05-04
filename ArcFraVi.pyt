@@ -258,7 +258,7 @@ class ArcFraVi(object):
   
     def isLicensed(self):
         #Set whether tool is licensed to execute.
-        """
+        
         arcpy.AddMessage("Comprobacion del estado de la extension Spatial Analyst...")
         try:
             if arcpy.CheckExtension("Spatial") != "Available":
@@ -274,10 +274,10 @@ class ArcFraVi(object):
                     arcpy.AddMessage("La extension Spatial Analyst no esta disponible para su uso..")
         except Exception:
             arcpy.AddMessage(
-                "La extension Spatial Analyst no esta disponible para su uso. Compruebe sus licencias para asegurarse de que tiene"
-                "acceso a esta extension.")
-            return False
-        """
+                "La extension Spatial Analyst puede no estar disponible para su uso. En caso de de presentar errores de ejecucion compruebe sus licencias para asegurarse."
+                )
+            return True
+        
         return True  # The tool can be run
 
 
